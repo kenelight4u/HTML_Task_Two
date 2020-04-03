@@ -1,18 +1,40 @@
+* {
+    box-sizing: border-box;
+  }
+  
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+
 body {
     margin: 0;
-    background-image: url(images/background_image1.PNG);
+    /*
+    I known I have many things to work on this project. The responsiveness is not coming up as I intended
+    I use just two images for the work with the help of @media....media queries
+    */
+    background-image: url(images/bck_img2.PNG);
     background-color: #062863;
-    height: 200px;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+@media only screen and (min-width: 400px) {
+    body {
+        background-image: url(images/bck_img.PNG);
+    }
 }
 main{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    height: 170vh;
     font-family: U8, sans-serif;
 }
 .main{
@@ -29,8 +51,7 @@ img {
     justify-self: center;
     justify-content:center;
     flex-direction: column;
-    width: 600px;
-    max-width: 23rem;
+    width: 450px;
     padding: 2.5rem;
     padding-bottom: 2rem;
     border-bottom-right-radius: 1.25rem;
@@ -125,7 +146,8 @@ select {
     flex-direction: row;
     white-space: nowrap;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
     font-weight: 400;
     font-family: Karia, sans-serif;
 }
