@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
   }
-/* The one I submitted wasn't Responsive as this particular one */
+  
 .row::after {
     content: "";
     clear: both;
@@ -15,6 +15,10 @@
 
 body {
     margin: 0;
+    /*
+    I known I have many things to work on this project. The responsiveness is not coming up as I intended
+    I use just two images for the work with the help of @media....media queries
+    */
     background-image: url(images/bck_img2.PNG);
     background-color: #062863;
     background-size: 100% 100%;
@@ -27,34 +31,42 @@ body {
         background-image: url(images/bck_img.PNG);
     }
 }
-.main{
-	display: grid;
-    justify-content: center;
+main{
+	display: flex;
+	justify-content: center;
+	align-items: center;
     font-family: U8, sans-serif;
+}
+.main{
+	display: flex;
+	justify-content: center;
+    flex-direction: column;
 }
 img {
     max-width: 100%;
     height: auto;
 }
 .center {
-    display: grid;
+    display: flex;
     justify-self: center;
-    justify-content: stretch;
-    max-width: 91.16667%;
-    padding: 1.5rem;
-    padding-bottom: 1rem;
+    justify-content:center;
+    flex-direction: column;
+    width: 450px;
+    padding: 2.5rem;
+    padding-bottom: 2rem;
     border-bottom-right-radius: 1.25rem;
     border-top-left-radius: 1.25rem;
     border-top-right-radius: 1.25rem;
-    background-color: #fff;  font-size: 1.45rem;
+    background-color: #fff;  
 }
 h1 {
-    font-size: 1.25rem;
+    font-size: 1.45rem; 
     color: #083e9e; 
     text-align: center; 
     font-weight: 700; 
     font-family: U8, sans-serif; 
-    margin: 0;   
+    margin: 0;
+    
 }
 #p_top {
     font-size: 0.875rem;
@@ -67,8 +79,8 @@ h1 {
 .form_div {
     position: relative;
     margin-bottom: 2rem;
-    flex-direction: row; 
-    display: grid; 
+    flex-direction: column;
+    display: flex;
 }
 label {
     cursor: default;
@@ -116,7 +128,7 @@ select {
     font-family: U8, sans-serif;
     justify-content: center;
     align-items: center;
-    display: grid;
+    display: flex;
     border-bottom-right-radius: .75rem;
     border-top-left-radius: .75rem;
     border-top-right-radius: .75rem;
@@ -146,28 +158,3 @@ a:hover {
     text-decoration: none;
     color: rgb(179, 179, 179);
 }
-
-@media only screen and (min-width: 640px) {
-    /* For tablets: */
-    .center {
-        width: 470px;
-        padding: 2.5rem;
-        padding-bottom: 2rem;
-    }
-    h1 {
-        font-size: 1.45rem;
-    }
-  }
-  
-  @media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .center {
-        width: 470px;
-        padding: 2.5rem;
-        padding-bottom: 2rem;
-    }
-    h1 {
-        font-size: 1.45rem;
-    }
-    
-  }
